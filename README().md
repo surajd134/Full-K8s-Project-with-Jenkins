@@ -13,10 +13,10 @@ chmod +x kubectl
 sudo mv kubectl /usr/local/bin/
 
 
-**Create a directory in jenkins machin and copy the config data from K8s and past it here**
+# **Create a directory in jenkins machin and copy the config data from K8s and past it here**
 mkdir -p ~/.kube
 vi ~/.kube/config
 chmod 600 ~/.kube/config    -- give permission
 
-**Then test the connection between jenkins and k8s on jenkins machin**
+# **Then test the connection between jenkins and k8s on jenkins machin**
 kubectl get nodes
