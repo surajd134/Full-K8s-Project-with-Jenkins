@@ -10,7 +10,7 @@ spec:
     matchLabels:
       app: hostar
   template:
-    matadata:
+    metadata:
       labels:
         app: hostar
     spec:
