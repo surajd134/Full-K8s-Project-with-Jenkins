@@ -11,7 +11,7 @@ spec:
       app: hostar
   template:
     metadata:
-      labels:
+      lables:
         app: hostar
     spec:
       containers:
