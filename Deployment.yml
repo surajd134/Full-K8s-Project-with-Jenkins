@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hostar-deploy
+  lables:
+    app: hostar
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: hostar
+  template:
+    matadata:
+      labels:
+        app: hostar
+    spec:
+      containers:
+        - name: cont1
+          image: suraj143docker/hostar-image
+
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hostar-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: hostar
+  ports:
+    - port: 80
+      targetPort: 80
+
